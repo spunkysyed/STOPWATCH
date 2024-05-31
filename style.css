@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 209, 64);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.text {
+  display: flex;
+  font-size: 100px;
+  margin-top: 20px;
+}
+
+.text::before {
+  content: "-";
+  font-size: 100px;
+  margin-right: 20px;
+}
+
+.text::after {
+  content: "-";
+  font-size: 100px;
+  margin-left: 20px;
+}
+
+.stopwatch {
+  width: 25%;
+  height: 65%;
+  position: relative;
+}
+
+.stopwatch img{
+width: 100%;
+height: 100%;
+}
+
+.stopwatch button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  font-weight: bolder;
+}
+
+#reset {
+  cursor: pointer;
+  top: 65px;
+  left: 0px;
+  transform: rotateZ(-35deg) translateX(10px);
+}
+
+#start {
+  cursor: pointer;
+  top: -20px;
+  right: 170px;
+}
+
+#stop {
+  cursor: pointer;
+  top: 70px;
+  right: 0px;
+  transform: rotateZ(35deg) translateX(-15px);
+}
+
+.timer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  font-size: 42px;
+  background-color: white;
+  top: 52%;
+  margin-left: 78px;
+}
+
+@media screen and (max-width: 767px) {
+  /* CSS for mobile screens */
+  .main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 209, 64);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 150px;
+  }
+
+  .text {
+    font-size: 35px;
+    margin-top: 75px;
+    margin-left: 30px;
+    font-weight: bolder;
+  }
+
+  .text::before {
+    display: none;
+  }
+
+  .text::after {
+    display: none;
+  }
+
+  .stopwatch {
+    width: 52%;
+    min-width: 250px;
+    height: 30%;
+    min-height: 350px;
+    margin-left: 33px;
+    position: relative;
+  }
+
+.stopwatch img{
+    width: 100%;
+    height: 100%;
+}
+
+  .stopwatch button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bolder;
+    position: absolute;
+  }
+
+  #reset {
+    cursor: pointer;
+    left: 10px;
+    top: 10px;
+    transform: rotateZ(-38deg) translateX(-22px);
+  }
+
+  #start {
+    cursor: pointer;
+    top: -20px;
+    left: 41%;
+  }
+
+  #stop {
+    cursor: pointer;
+    top: 38px;
+    right: -20px;
+    transform: rotateZ(35deg) translateX(-17px);
+  }
+
+  .timer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    font-size: 25px;
+    background-color: white;
+    top: 52%;
+    left:-20px;
+  }
+}
